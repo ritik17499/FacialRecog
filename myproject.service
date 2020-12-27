@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve myproject
+After=network.target
+
+[Service]
+User=Ritik
+Group=www-data
+WorkingDirectory=/home/thedrunkcoder/Desktop/Project
+Environment="PATH=/home/thedrunkcoder/Desktop/Project"
+ExecStart=/home/thedrunkcoder/Desktop/Project/uwsgi --ini myproject.ini
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+<!doctype html>
+<title>{% block title %}{% endblock %}</title>
+<ul>
+{% for i in range(0,len) %}
+  <li><a href={{link[i]}}> {{i+1}} {{ users[i] }}</a></li>
+{% endfor %}
+
+</ul>
